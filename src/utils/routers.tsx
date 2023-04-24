@@ -23,7 +23,7 @@ export const routers = createBrowserRouter(
     },
   ],
   {
-    basename: '/article-emotion/',
+    basename: '/article-survey/',
   }
 );
 
