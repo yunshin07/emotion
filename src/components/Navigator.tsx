@@ -1,6 +1,15 @@
 import { Dispatch, FC, SetStateAction } from 'react';
-import { Box, Button, Stack, Tab, Tabs, styled } from '@mui/material';
+import {
+  Box,
+  Button,
+  Container,
+  Stack,
+  Tab,
+  Tabs,
+  styled,
+} from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
+import { useOptionContext } from '../contexts';
 
 interface NavigatorProps {
   selectedNav: number;
@@ -51,6 +60,7 @@ export const Navigator: FC<NavigatorProps> = ({
   setSelectedNav,
 }) => {
   const { pathname } = useLocation();
+  const { isSmall } = useOptionContext();
 
   return (
     <Stack
@@ -58,13 +68,16 @@ export const Navigator: FC<NavigatorProps> = ({
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <Row sx={{
-        pb: 0,
-      }}>
+      <Row
+        sx={{
+          pb: 0,
+        }}>
         <Button
           component={Link}
           to={pathname == '/sub' ? '/' : '/sub'}>
-          {pathname == '/' ? 'A유형 - 단일 이모티콘 체계 유형' : 'B유형 - 시퀀스 이모티콘 체계 유형'}
+          {pathname == '/'
+            ? 'A유형 - 단일 이모티콘 체계 유형'
+            : 'B유형 - 시퀀스 이모티콘 체계 유형'}
         </Button>
       </Row>
       <Row>
@@ -72,8 +85,11 @@ export const Navigator: FC<NavigatorProps> = ({
           sx={{
             borderBottom: 1,
             borderColor: 'divider',
+            overflow: 'auto',
           }}>
-          <Tabs value={selectedNav}>
+          <Tabs
+            value={selectedNav}
+            orientation={isSmall ? 'vertical' : 'horizontal'}>
             {navData.map((nav) => {
               return (
                 <Tab

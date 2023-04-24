@@ -2,6 +2,7 @@ import { FC, useEffect, useState } from 'react';
 import { Box, BoxProps, Stack, Typography, Tooltip } from '@mui/material';
 import { iconTranslation } from '../data';
 import { useLocation } from 'react-router-dom';
+import { useOptionContext } from '../contexts';
 
 interface SelectButtonProps extends BoxProps {
   source: string;
@@ -10,7 +11,7 @@ interface SelectButtonProps extends BoxProps {
   desc?: string;
   role?: string;
   width?: number;
-  height?: number
+  height?: number;
 }
 
 export const SelectButton: FC<SelectButtonProps> = ({
@@ -24,13 +25,16 @@ export const SelectButton: FC<SelectButtonProps> = ({
   ...rest
 }) => {
   const { pathname } = useLocation();
+  const { isSmall } = useOptionContext();
   const [toolTip, setToolTip] = useState<string>('');
+
+console.log(isSmall)
 
   useEffect(() => {
     if (pathname === '/') {
       let tip = iconTranslation.find((v) => v.id === title)?.desc;
       if (tip === '멋져요.') {
-        tip = '추천해요.'
+        tip = '추천해요.';
       }
       setToolTip(tip || '');
     } else {
@@ -45,7 +49,7 @@ export const SelectButton: FC<SelectButtonProps> = ({
         component={'img'}
         sx={{
           cursor: 'pointer',
-          padding: '0.5rem',
+          padding: isSmall ? '0' : '0.5rem',
           borderRadius: '1rem',
           '&:hover': {
             backgroundColor: '#ececec',
@@ -54,8 +58,8 @@ export const SelectButton: FC<SelectButtonProps> = ({
         }}
         onClick={onSelect}
         src={source}
-        width={width}
-        height={height}
+        width={isSmall ? width - 15 : width}
+        height={isSmall ? height - 15 : height}
         {...rest}
       />
     </Tooltip>
@@ -71,7 +75,7 @@ export const SelectButton: FC<SelectButtonProps> = ({
         component={'img'}
         sx={{
           cursor: 'pointer',
-          padding: '0.5rem',
+          padding: isSmall ? '0' : '0.5rem',
           borderRadius: '1rem',
           '&:hover': {
             backgroundColor: '#ececec',
@@ -80,12 +84,11 @@ export const SelectButton: FC<SelectButtonProps> = ({
         }}
         onClick={onSelect}
         src={source}
-        width={width}
-        height={height}
+        width={isSmall ? width - 15 : width}
+        height={isSmall ? height - 15 : height}
         {...rest}
       />
-      <Typography
-        variant='body2'>
+      <Typography variant='body2'>
         {pathname === '/' && toolTip !== '' ? toolTip : title}
       </Typography>
     </Stack>

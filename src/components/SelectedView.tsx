@@ -20,7 +20,7 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
       }
     | undefined
   >();
-  const { recommend, nextArticle, setRecommend, setNextArticle } =
+  const { recommend, nextArticle, setRecommend, setNextArticle, isSmall } =
     useOptionContext();
   const [flag, setFlag] = useState<{
     recommend: boolean;
@@ -139,15 +139,15 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
               spacing={1}>
               <Paper
                 sx={{
-                  padding: '0.5rem',
+                  padding: isSmall ? '0.2rem' : '0.5rem',
                   pl: '0.7rem',
                   pr: '0.7rem',
                   borderRadius: '2rem',
                 }}
                 elevation={4}>
                 <Box
-                  width={40}
-                  height={40}
+                  width={isSmall ? 30 : 40}
+                  height={isSmall ? 30 : 40}
                   component={'img'}
                   src={`assets/htmls/images/${
                     iconData[topic].icons[selected[0]]?.desc
@@ -157,11 +157,18 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
               </Paper>
               <Paper
                 sx={{
-                  padding: '2rem',
+                  padding: isSmall ? '0.4rem' : '2rem',
                   borderRadius: '2rem',
                 }}
-                elevation={4}
-              />
+                elevation={4}>
+                {isSmall && (
+                  <Box
+                    component={'div'}
+                    width={30}
+                    height={30}
+                  />
+                )}
+              </Paper>
             </Stack>
           ) : combo ? (
             <Paper
@@ -180,6 +187,8 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
                   src={`${BASE_URL}/assets/htmls/images/${
                     iconData[topic].icons[selected[0]]?.desc
                   }.png`}
+                  width={isSmall ? 30 : 40}
+                  height={isSmall ? 30 : 40}
                   alt='icon'
                 />
                 <Box
@@ -187,6 +196,8 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
                   src={`${BASE_URL}/assets/htmls/images/${
                     iconData[topic].icons[selected[1]]?.desc
                   }.png`}
+                  width={isSmall ? 30 : 40}
+                  height={isSmall ? 30 : 40}
                   alt='icon'
                 />
               </Stack>
@@ -197,14 +208,14 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
               spacing={1}>
               <Paper
                 sx={{
-                  padding: '2rem',
+                  padding: isSmall ? '1rem' : '2rem',
                   borderRadius: '2rem',
                 }}
                 elevation={4}
               />
               <Paper
                 sx={{
-                  padding: '2rem',
+                  padding: isSmall ? '1rem' : '2rem',
                   borderRadius: '2rem',
                 }}
                 elevation={4}
@@ -239,8 +250,8 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
                   backgroundColor: 'transparent',
                 },
               }}
-              width={75}
-              height={75}
+              width={isSmall ? 55 : 75}
+              height={isSmall ? 55 : 75}
               role='option'
               onSelect={() => {
                 handleOptionSelect('recommend');
@@ -250,8 +261,8 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
               source={`${BASE_URL}/assets/htmls/images/${
                 !flag.next ? 'move02' : 'move02_on'
               }.png`}
-              width={75}
-              height={75}
+              width={isSmall ? 55 : 75}
+              height={isSmall ? 55 : 75}
               sx={{
                 cursor: 'pointer',
                 '&:hover': {

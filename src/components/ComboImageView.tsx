@@ -12,7 +12,7 @@ interface ComboImageViewProps {
 
 export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
   const [combo, setCombo] = useState<CombinationType>();
-  const { selected, media } = useOptionContext();
+  const { selected, media, isSmall } = useOptionContext();
 
   useEffect(() => {
     const icon = iconData[topic].icons;
@@ -48,8 +48,8 @@ export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
         overflow: 'auto',
         mr: '0.5rem',
         ml: '0.5rem',
-        padding: '1.5rem',
-        width: '55%',
+        padding: isSmall ? '0.5rem' : '1.5rem',
+        width: isSmall ? '80%' : '55%',
       }}
       justifyContent={'center'}
       spacing={2}>
@@ -63,8 +63,8 @@ export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
           return (
             <Paper
               sx={{
-                pl: !media ? '0.2rem' : '1.5rem',
-                pr: !media ? '0.2rem' : '1.5rem',
+                pl: isSmall ? '0' : !media ? '0.2rem' : '1.5rem',
+                pr: isSmall ? '0' : !media ? '0.2rem' : '1.5rem',
                 borderRadius: '1rem',
               }}
               elevation={4}
@@ -84,11 +84,15 @@ export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
                   variant='caption'
                   sx={{
                     whiteSpace: 'nowrap',
-                    fontSize: media ? 12 : 10,
+                    fontSize: isSmall ? 8 : media ? 12 : 10,
                   }}>
                   {v.desc}
                 </Typography>
-                <Typography variant='caption'>
+                <Typography
+                  sx={{
+                    fontSize: isSmall ? 8 : media ? 12 : 10,
+                  }}
+                  variant='caption'>
                   {v.basePick ? v.basePick : 0}
                 </Typography>
               </Stack>

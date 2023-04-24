@@ -7,12 +7,12 @@ interface ImageProps {
 }
 
 export const Image: FC<ImageProps> = ({ path }) => {
-  const { media } = useOptionContext();
+  const { media, isSmall } = useOptionContext();
   return (
     <Box
       component={'img'}
-      height={media ? 50 : 40}
-      width={media ? 50 : 40}
+      height={isSmall ? 30 : media ? 50 : 40}
+      width={isSmall ? 30 : media ? 50 : 40}
       src={path}
       alt='icon'
     />

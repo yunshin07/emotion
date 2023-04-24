@@ -20,6 +20,7 @@ const App: FC = () => {
     recommend,
     nextArticle,
     setSelected: setContextSelectd,
+    isSmall,
   } = useOptionContext();
 
   const handleSelect = (selection: { id: number; desc: string }) => {
@@ -40,7 +41,7 @@ const App: FC = () => {
     if (withSelected.length === 3) {
       withSelected.shift();
       setSelected(withSelected);
-      setContextSelectd(withSelected)
+      setContextSelectd(withSelected);
       return;
     }
   };
@@ -53,7 +54,11 @@ const App: FC = () => {
       />
       <Container maxWidth='xl'>
         <Stack>
-          <div
+          <Box
+            component={'div'}
+            sx={{
+              overflow: 'auto',
+            }}
             dangerouslySetInnerHTML={{
               __html: htmlContent[selectedNav].content,
             }}
@@ -62,6 +67,7 @@ const App: FC = () => {
           <Container
             sx={{
               backgroundColor: '#ececec',
+              padding: isSmall ? '0.5rem' : 'inherit',
               mt: '1rem',
               mb: '1rem',
             }}>
@@ -70,14 +76,16 @@ const App: FC = () => {
               sx={{
                 display: 'flex',
                 flexDirection: 'row',
-                justifyContent:'center',
+                justifyContent: isSmall ? 'space-between' : 'center',
+                padding: isSmall ? 0 : 'inherit',
                 alignItems: 'center',
-              }}
-              >
-              <ComboImageView topic={selectedNav} />
-              <Stack direction={'row'} sx={{
-                ml: '1.5rem'
               }}>
+              <ComboImageView topic={selectedNav} />
+              <Stack
+                direction={isSmall ? 'column' : 'row'}
+                sx={{
+                  ml: '1.5rem',
+                }}>
                 <ComboButton
                   iconPath={`${BASE_URL}/assets/htmls/images/move01.png`}
                   desc='추천'
@@ -85,7 +93,7 @@ const App: FC = () => {
                 />
                 <ComboButton
                   iconPath={`${BASE_URL}/assets/htmls/images/move02.png`}
-                  desc='후속기사 원해요'
+                  desc='후속 원해요'
                   number={nextArticle}
                 />
               </Stack>
@@ -100,6 +108,7 @@ const App: FC = () => {
               alignItems: 'center',
               pt: '1rem',
               pb: '1rem',
+              scrollbarWidth: 'none',
             }}>
             <Paper
               elevation={4}
@@ -113,7 +122,7 @@ const App: FC = () => {
               }}>
               <Stack
                 direction={'row'}
-                spacing={5}>
+                spacing={isSmall ? 2 : 5}>
                 {iconData[selectedNav].icons.map((selection, idx) => {
                   return (
                     <SelectButton

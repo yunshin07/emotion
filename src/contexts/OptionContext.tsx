@@ -12,6 +12,7 @@ import React, {
 
 interface OptionContextProps {
   media: boolean;
+  isSmall: boolean;
   recommend: number;
   setRecommend: Dispatch<SetStateAction<number>>;
   nextArticle: number;
@@ -35,9 +36,11 @@ export const OptionContextProvider: FC<OptionContextProviderProps> = ({
   const [nextArticle, setNextArticle] = useState(5);
   const [selected, setSelected] = useState<number[]>();
   const mediaQuery = useMediaQuery('(min-width:900px)');
+  const isSmall = useMediaQuery('(max-width:400px)');
 
   const contextValue = useMemo(
     () => ({
+      isSmall,
       media: mediaQuery,
       recommend,
       nextArticle,
