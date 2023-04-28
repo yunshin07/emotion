@@ -167,7 +167,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [6, 6],
-        desc: '정말 어의없어요.',
+        desc: '정말 어이없어요.',
       },
       {
         combo: [1, 0],
@@ -219,7 +219,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [1, 6],
-        desc: '고맙지만 어의없어요.',
+        desc: '고맙지만 어이없어요.',
       },
       {
         combo: [6, 1],
@@ -247,7 +247,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [2, 6],
-        desc: '괜찮지만 어의없어요.',
+        desc: '괜찮지만 어이없어요.',
       },
       {
         combo: [6, 2],
@@ -271,7 +271,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [3, 6],
-        desc: '부럽지만 어의없어요.',
+        desc: '부럽지만 어이없어요.',
       },
       {
         combo: [6, 3],
@@ -283,12 +283,12 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [4, 6],
-        desc: '화나고 어의없어요.',
+        desc: '화나고 어이없어요.',
         basePick: 17,
       },
       {
         combo: [5, 6],
-        desc: '슬프고 어의없어요.',
+        desc: '슬프고 어이없어요.',
         basePick: 11,
       },
     ],
@@ -322,7 +322,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [6, 6],
-        desc: '정말 어의없어요.',
+        desc: '정말 어이없어요.',
       },
       {
         combo: [7, 7],
@@ -361,7 +361,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [0, 6],
-        desc: '좋지만 어의없어요.',
+        desc: '좋지만 어이없어요.',
       },
       {
         combo: [6, 0],
@@ -401,7 +401,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [1, 6],
-        desc: '고맙지만 어의없어요.',
+        desc: '고맙지만 어이없어요.',
       },
       {
         combo: [6, 1],
@@ -437,7 +437,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [2, 6],
-        desc: '괜찮지만 어의없어요.',
+        desc: '괜찮지만 어이없어요.',
       },
       {
         combo: [6, 2],
@@ -461,7 +461,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [3, 6],
-        desc: '웃기지만 어의없어요.',
+        desc: '웃기지만 어이없어요.',
       },
       {
         combo: [6, 3],
@@ -481,7 +481,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [4, 6],
-        desc: '화나고 어의없어요.',
+        desc: '화나고 어이없어요.',
       },
       {
         combo: [4, 7],
@@ -489,7 +489,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [5, 6],
-        desc: '슬프고 어의없어요.',
+        desc: '슬프고 어이없어요.',
       },
       {
         combo: [5, 7],
@@ -530,7 +530,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [6, 6],
-        desc: '정말 어의없어요.',
+        desc: '정말 어이없어요.',
       },
       {
         combo: [0, 1],
@@ -562,7 +562,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [0, 6],
-        desc: '멋지지만 어의없어요.',
+        desc: '멋지지만 어이없어요.',
       },
       {
         combo: [6, 0],
@@ -594,7 +594,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [1, 6],
-        desc: '괜찮지만 어의없어요.',
+        desc: '괜찮지만 어이없어요.',
       },
       {
         combo: [6, 1],
@@ -623,7 +623,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [2, 6],
-        desc: '웃기지만 어의없어요.',
+        desc: '웃기지만 어이없어요.',
       },
       {
         combo: [6, 2],
@@ -648,7 +648,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [3, 6],
-        desc: '부럽지만 어의없어요.',
+        desc: '부럽지만 어이없어요.',
         basePick: 12,
       },
       {
@@ -665,11 +665,11 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [4, 5],
-        desc: '화나고 어의없어요.',
+        desc: '화나고 어이없어요.',
       },
       {
         combo: [5, 6],
-        desc: '슬프고 어의없어요.',
+        desc: '슬프고 어이없어요.',
       },
     ],
   },
@@ -702,7 +702,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [6, 6],
-        desc: '정말 어의없어요.',
+        desc: '정말 어이없어요.',
       },
       {
         combo: [0, 1],
@@ -734,7 +734,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [0, 6],
-        desc: '고맙지만 어의없어요.',
+        desc: '고맙지만 어이없어요.',
       },
       {
         combo: [6, 0],
@@ -768,7 +768,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [1, 6],
-        desc: '괜찮지만 어의없어요.',
+        desc: '괜찮지만 어이없어요.',
       },
       {
         combo: [6, 1],
@@ -797,7 +797,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [2, 6],
-        desc: '재밌지만 어의없어요.',
+        desc: '재밌지만 어이없어요.',
       },
       {
         combo: [6, 2],
@@ -821,7 +821,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [3, 6],
-        desc: '부럽지만 어의없어요.',
+        desc: '부럽지만 어이없어요.',
       },
       {
         combo: [4, 5],
@@ -829,11 +829,11 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [4, 6],
-        desc: '화나고 어의없어요.',
+        desc: '화나고 어이없어요.',
       },
       {
         combo: [5, 6],
-        desc: '슬프고 어의없어요.',
+        desc: '슬프고 어이없어요.',
       },
     ],
   },
@@ -866,7 +866,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [6, 6],
-        desc: '정말 어의없어요.',
+        desc: '정말 어이없어요.',
       },
       {
         combo: [7, 7],
@@ -902,7 +902,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [0, 6],
-        desc: '고맙지만 어의없어요.',
+        desc: '고맙지만 어이없어요.',
       },
       {
         combo: [6, 0],
@@ -946,7 +946,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [1, 6],
-        desc: '멋지지만 어의없어요.',
+        desc: '멋지지만 어이없어요.',
       },
       {
         combo: [6, 1],
@@ -1026,7 +1026,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [3, 6],
-        desc: '웃기지만 어의없어요.',
+        desc: '웃기지만 어이없어요.',
       },
       {
         combo: [6, 3],
@@ -1058,7 +1058,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [4, 6],
-        desc: '부럽지만 어의없어요.',
+        desc: '부럽지만 어이없어요.',
       },
       {
         combo: [6, 4],
@@ -1082,7 +1082,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [5, 6],
-        desc: '슬프고 어의없어요.',
+        desc: '슬프고 어이없어요.',
       },
       {
         combo: [5, 7],
@@ -1139,7 +1139,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [6, 6],
-        desc: '정말 어의없어요.',
+        desc: '정말 어이없어요.',
       },
       {
         combo: [7, 7],
@@ -1176,7 +1176,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [0, 6],
-        desc: '좋지만 어의없어요.',
+        desc: '좋지만 어이없어요.',
       },
       {
         combo: [6, 0],
@@ -1217,7 +1217,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [1, 6],
-        desc: '멋지지만 어의없어요.',
+        desc: '멋지지만 어이없어요.',
       },
       {
         combo: [6, 1],
@@ -1253,7 +1253,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [2, 6],
-        desc: '괜찮지만 어의없어요.',
+        desc: '괜찮지만 어이없어요.',
       },
       {
         combo: [6, 2],
@@ -1285,7 +1285,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [3, 6],
-        desc: '재밌지만 어의없어요.',
+        desc: '재밌지만 어이없어요.',
       },
       {
         combo: [6, 3],
@@ -1305,7 +1305,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [4, 6],
-        desc: '화나고 어의없어요.',
+        desc: '화나고 어이없어요.',
       },
       {
         combo: [4, 7],
@@ -1313,7 +1313,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [5, 6],
-        desc: '슬프고 어의없어요.',
+        desc: '슬프고 어이없어요.',
       },
       {
         combo: [5, 7],
@@ -1350,7 +1350,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [5, 5],
-        desc: '정말 어의없어요.',
+        desc: '정말 어이없어요.',
       },
       {
         combo: [6, 6],
@@ -1380,7 +1380,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [0, 5],
-        desc: '좋지만 어의없어요.',
+        desc: '좋지만 어이없어요.',
       },
       {
         combo: [5, 0],
@@ -1421,7 +1421,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [1, 5],
-        desc: '멋지지만 어의없어요.',
+        desc: '멋지지만 어이없어요.',
       },
       {
         combo: [5, 1],
@@ -1457,7 +1457,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [2, 5],
-        desc: '괜찮지만 어의없어요.',
+        desc: '괜찮지만 어이없어요.',
       },
       {
         combo: [5, 2],
@@ -1489,7 +1489,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [3, 5],
-        desc: '부럽지만 어의없어요.',
+        desc: '부럽지만 어이없어요.',
       },
       {
         combo: [5, 3],
@@ -1513,7 +1513,7 @@ export const combination: CombinationType[] = [
       },
       {
         combo: [4, 5],
-        desc: '슬프고 어의없어요.',
+        desc: '슬프고 어이없어요.',
       },
       {
         combo: [4, 6],

@@ -48,7 +48,7 @@ export const iconTranslation = [
   },
   {
     id: 'nonsense',
-    desc: '어의없어요.',
+    desc: '어이없어요.',
   },
   {
     id: 'envy',
