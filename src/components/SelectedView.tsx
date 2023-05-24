@@ -131,7 +131,9 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
         alignItems: 'center',
         marginBottom: '2rem',
       }}>
-      <Stack alignItems={'center'}>
+      <Stack
+        alignItems={'center'}
+        justifyContent={'center'}>
         <Stack direction={'row'}>
           {selected.length > 0 && !combo ? (
             <Stack
@@ -277,13 +279,6 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
           </Stack>
           <Typography variant='body2'>{handleDesc()}&emsp;</Typography>
         </Stack>
-        <Typography
-          sx={{
-            marginTop: '0.5rem',
-          }}
-          variant='body2'>
-          {handleDescription() || ''}
-        </Typography>
       </Stack>
     </Container>
   );
