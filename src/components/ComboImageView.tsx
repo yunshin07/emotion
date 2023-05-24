@@ -4,6 +4,7 @@ import { Image } from './Image';
 import { CombinationType, combination } from '../combination';
 import { basePath, iconData } from '../data';
 import { useOptionContext } from '../contexts';
+import { LeftArrow, RightArrow } from '../utils/icons';
 const { BASE_URL } = import.meta.env;
 
 interface ComboImageViewProps {
@@ -59,7 +60,16 @@ export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
         spacing={1}
         sx={{
           width: '100%',
+          justifyContent:'space-between'
         }}>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <LeftArrow />
+        </Box>
         {combo?.combination?.map((v, i) => {
           if (v.basePick) {
             return (
@@ -104,6 +114,14 @@ export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
             return null;
           }
         })}
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <RightArrow />
+        </Box>
       </Stack>
     </Stack>
   );
