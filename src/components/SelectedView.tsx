@@ -247,8 +247,8 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
                       backgroundColor: 'transparent',
                     },
                   }}
-                  width={isSmall ? 55 : 75}
-                  height={isSmall ? 55 : 75}
+                  width={isSmall ? 55 : 60}
+                  height={isSmall ? 55 : 60}
                   role='option'
                   onSelect={() => {
                     handleOptionSelect('recommend');
@@ -258,8 +258,8 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
                   source={`${BASE_URL}/assets/htmls/images/${
                     !flag.next ? 'move02' : 'move02_on'
                   }.png`}
-                  width={isSmall ? 55 : 75}
-                  height={isSmall ? 55 : 75}
+                  width={isSmall ? 55 : 60}
+                  height={isSmall ? 55 : 60}
                   sx={{
                     cursor: 'pointer',
                     '&:hover': {
