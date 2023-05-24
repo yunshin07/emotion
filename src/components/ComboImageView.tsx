@@ -60,7 +60,11 @@ export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
         spacing={1}
         sx={{
           width: '100%',
-          justifyContent:'space-between'
+          justifyContent:'space-between',
+          scrollbarWidth: 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none',
+          }
         }}>
         <Box
           sx={{

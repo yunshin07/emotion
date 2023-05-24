@@ -177,7 +177,7 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
               ) : combo ? (
                 <Paper
                   sx={{
-                    padding: '0.7rem',
+                    padding: '0.8rem',
                     pl: '0.7rem',
                     pr: '0.7rem',
                     borderRadius: '2rem',
