@@ -60,11 +60,11 @@ export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
         spacing={1}
         sx={{
           width: '100%',
-          justifyContent:'space-between',
+          justifyContent: 'space-between',
           scrollbarWidth: 'none',
           '&::-webkit-scrollbar': {
             display: 'none',
-          }
+          },
         }}>
         <Box
           sx={{
@@ -72,7 +72,13 @@ export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <LeftArrow />
+          <Typography
+            variant='h3'
+            sx={{
+              color: 'gray',
+            }}>
+            &lsaquo;
+          </Typography>
         </Box>
         {combo?.combination?.map((v, i) => {
           if (v.basePick) {
@@ -124,7 +130,13 @@ export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <RightArrow />
+          <Typography
+            sx={{
+              color: 'gray',
+            }}
+            variant='h3'>
+            &rsaquo;
+          </Typography>
         </Box>
       </Stack>
     </Stack>
