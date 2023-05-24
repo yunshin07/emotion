@@ -50,6 +50,7 @@ export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
         ml: '0.5rem',
         padding: isSmall ? '0.5rem' : '1.5rem',
         width: isSmall ? '80%' : '55%',
+        scrollbarWidth: 'none',
       }}
       justifyContent={'center'}
       spacing={2}>
