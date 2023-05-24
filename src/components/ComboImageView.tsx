@@ -61,44 +61,48 @@ export const ComboImageView: FC<ComboImageViewProps> = ({ topic }) => {
           width: '100%',
         }}>
         {combo?.combination?.map((v, i) => {
-          return (
-            <Paper
-              sx={{
-                pl: isSmall ? '0' : !media ? '0.2rem' : '1.5rem',
-                pr: isSmall ? '0' : !media ? '0.2rem' : '1.5rem',
-                borderRadius: '1rem',
-              }}
-              elevation={4}
-              key={i}>
-              <Stack alignItems={'center'}>
-                <Stack direction={'row'}>
-                  {v.icons?.map((img, i) => {
-                    return (
-                      <Image
-                        path={img}
-                        key={i}
-                      />
-                    );
-                  })}
+          if (v.basePick) {
+            return (
+              <Paper
+                sx={{
+                  pl: isSmall ? '0' : !media ? '0.2rem' : '1.5rem',
+                  pr: isSmall ? '0' : !media ? '0.2rem' : '1.5rem',
+                  borderRadius: '1rem',
+                }}
+                elevation={4}
+                key={i}>
+                <Stack alignItems={'center'}>
+                  <Stack direction={'row'}>
+                    {v.icons?.map((img, i) => {
+                      return (
+                        <Image
+                          path={img}
+                          key={i}
+                        />
+                      );
+                    })}
+                  </Stack>
+                  <Typography
+                    variant='caption'
+                    sx={{
+                      whiteSpace: 'nowrap',
+                      fontSize: isSmall ? 8 : media ? 12 : 10,
+                    }}>
+                    {v.desc}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontSize: isSmall ? 8 : media ? 12 : 10,
+                    }}
+                    variant='caption'>
+                    {v.basePick ? v.basePick : 0}
+                  </Typography>
                 </Stack>
-                <Typography
-                  variant='caption'
-                  sx={{
-                    whiteSpace: 'nowrap',
-                    fontSize: isSmall ? 8 : media ? 12 : 10,
-                  }}>
-                  {v.desc}
-                </Typography>
-                <Typography
-                  sx={{
-                    fontSize: isSmall ? 8 : media ? 12 : 10,
-                  }}
-                  variant='caption'>
-                  {v.basePick ? v.basePick : 0}
-                </Typography>
-              </Stack>
-            </Paper>
-          );
+              </Paper>
+            );
+          } else {
+            return null;
+          }
         })}
       </Stack>
     </Stack>
