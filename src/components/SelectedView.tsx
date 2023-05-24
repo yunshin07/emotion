@@ -132,7 +132,9 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
         marginBottom: '2rem',
       }}>
       <Stack alignItems={'center'}>
-        <Stack direction={'row'}>
+        <Stack
+          direction={'row'}
+          alignItems={'center'}>
           <Stack
             alignItems={'center'}
             justifyContent={'center'}>
@@ -143,15 +145,16 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
                   spacing={1}>
                   <Paper
                     sx={{
-                      padding: isSmall ? '0.2rem' : '0.5rem',
-                      pl: '0.7rem',
-                      pr: '0.7rem',
-                      borderRadius: '2rem',
+                      padding: isSmall ? '0.2rem' : '0.3rem',
+                      borderRadius: 100,
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
                     }}
                     elevation={4}>
                     <Box
-                      width={isSmall ? 30 : 40}
-                      height={isSmall ? 30 : 40}
+                      width={isSmall ? 30 : 50}
+                      height={isSmall ? 30 : 50}
                       component={'img'}
                       src={`assets/htmls/images/${
                         iconData[topic].icons[selected[0]]?.desc
@@ -161,26 +164,17 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
                   </Paper>
                   <Paper
                     sx={{
-                      padding: isSmall ? '0.4rem' : '1.9rem',
-                      borderRadius: '2rem',
+                      padding: isSmall ? '1.1rem' : '1.9rem',
+                      borderRadius: 100,
                     }}
-                    elevation={4}>
-                    {isSmall && (
-                      <Box
-                        component={'div'}
-                        width={30}
-                        height={30}
-                      />
-                    )}
-                  </Paper>
+                    elevation={4}
+                  />
                 </Stack>
               ) : combo ? (
                 <Paper
                   sx={{
-                    padding: '0.8rem',
-                    pl: '0.7rem',
-                    pr: '0.7rem',
-                    borderRadius: '2rem',
+                    padding: '0.3rem',
+                    borderRadius: 100,
                   }}
                   elevation={4}>
                   <Stack
@@ -191,8 +185,8 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
                       src={`${BASE_URL}/assets/htmls/images/${
                         iconData[topic].icons[selected[0]]?.desc
                       }.png`}
-                      width={isSmall ? 30 : 40}
-                      height={isSmall ? 30 : 40}
+                      width={isSmall ? 30 : 50}
+                      height={isSmall ? 30 : 50}
                       alt='icon'
                     />
                     <Box
@@ -200,8 +194,8 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
                       src={`${BASE_URL}/assets/htmls/images/${
                         iconData[topic].icons[selected[1]]?.desc
                       }.png`}
-                      width={isSmall ? 30 : 40}
-                      height={isSmall ? 30 : 40}
+                      width={isSmall ? 30 : 50}
+                      height={isSmall ? 30 : 50}
                       alt='icon'
                     />
                   </Stack>
@@ -236,7 +230,8 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
             <Stack alignItems={'center'}>
               <Stack
                 direction={'row'}
-                alignItems={'center'}>
+                alignItems={'center'}
+                justifyContent={'center'}>
                 <SelectButton
                   source={`${BASE_URL}/assets/htmls/images/${
                     !flag.recommend ? 'move01' : 'move01_on'
@@ -247,8 +242,8 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
                       backgroundColor: 'transparent',
                     },
                   }}
-                  width={isSmall ? 55 : 60}
-                  height={isSmall ? 55 : 60}
+                  width={isSmall ? 50 : 60}
+                  height={isSmall ? 50 : 60}
                   role='option'
                   onSelect={() => {
                     handleOptionSelect('recommend');
@@ -258,8 +253,8 @@ export const SelectedView: FC<SelectedViewProps> = ({ selected, topic }) => {
                   source={`${BASE_URL}/assets/htmls/images/${
                     !flag.next ? 'move02' : 'move02_on'
                   }.png`}
-                  width={isSmall ? 55 : 60}
-                  height={isSmall ? 55 : 60}
+                  width={isSmall ? 50 : 60}
+                  height={isSmall ? 50 : 60}
                   sx={{
                     cursor: 'pointer',
                     '&:hover': {
